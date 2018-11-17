@@ -6,6 +6,7 @@ export CLICOLOR=1
 # Immediately exit if any command in the script fails
 set -e
 
+: <<'END_COMMENT'
 buildVersion=$(node -pe "require('$TRAVIS_BUILD_DIR/projects/ngx-ytd-api-lib/package.json').version")
 branchName=${TRAVIS_BRANCH:-'master'}
 
@@ -51,7 +52,7 @@ case "$MODE" in
   exit 1
   ;;
 esac
-
+END_COMMENT
 case "$DEPLOY_MODE" in
 "build-artifacts")
   echo -e "\x1b[34mGenerating build artifacts...\x1b[0m"

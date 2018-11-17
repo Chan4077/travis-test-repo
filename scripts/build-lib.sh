@@ -1,5 +1,6 @@
 #!/bin/bash
 
+: <<'END_COMMENT'
 # Enable color support
 CLICOLOR=1
 
@@ -123,3 +124,7 @@ else
     exit 1
   fi
 fi
+END_COMMENT
+
+echo "Hello, world!"
+exit 0

@@ -1,7 +1,9 @@
 #!/bin/bash
 
+: <<'END_COMMENT'
 # Script for building docs
 # Note that Firebase deploying will be automatically done by the Travis CI
+
 
 # Enable color support
 CLICOLOR=1
@@ -89,3 +91,8 @@ else
   fi
 
 fi
+
+END_COMMENT
+
+echo "Hello, World!"
+exit 0

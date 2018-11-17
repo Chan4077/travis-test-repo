@@ -1,5 +1,6 @@
 #!/bin/bash
 
+: <<'END_COMMENT'
 ##
 # Code adapted from https://github.com/angular/material2/blob/master/scripts/deploy/publish-build-artifacts.sh
 ##
@@ -130,3 +131,7 @@ for ((i = 0; i < ${#PACKAGES[@]}; i++)); do
   # directory changes.
   (publishPackage $packageName $packageRepo $packageLocation)
 done
+END_COMMENT
+
+echo "Hello, World!"
+exit 0
